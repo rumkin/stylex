@@ -1,0 +1,15 @@
+.eslintrc
+.eslintignore
+.editorconfig
+
+build/
+coverage/
+local/
+logs/
+pids/
+tmp/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini

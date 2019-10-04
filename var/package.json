@@ -1,0 +1,24 @@
+{
+  "name": "@stylex/color",
+  "version": "1.0.0",
+  "description": "Color palette as a dependency",
+  "main": "color.umd.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rumkin/stylex-colors.git"
+  },
+  "keywords": [
+    "styles",
+    "css",
+    "colors"
+  ],
+  "author": "Rumkin <dev@rumk.in> (https://rumk.in/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rumkin/stylex-colors/issues"
+  },
+  "homepage": "https://github.com/rumkin/stylex-colors#readme"
+}

@@ -1,0 +1,20 @@
+build/
+coverage/
+dist/
+local/
+logs/
+node_modules/
+pids/
+tmp/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Runtime files
+*.lock
+*.log
+*.pid
+*.pid.lock
