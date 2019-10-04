@@ -2,7 +2,7 @@
   "name": "@stylex/color",
   "version": "1.0.0",
   "description": "Color palette as a dependency",
-  "main": "color.umd.js",
+  "main": "colors.umd.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
