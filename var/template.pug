@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+  head
+    title Stylex.Colors
+    meta(name="viewport", value="width=device-width, initial-scale=1, shrink-to-fit=no")
+    style
+      include style.css
+  body
+    header.Page-header
+      div.container.Header
+        div.shrink-0.grow-0
+          h2.Header-brand @stylex/colors
+          p.Header-intro Color palette as a dependency
+        div.shrink-1.grow-1
+        a.shrink-0.grow-0(href="https://github.com/rumkin/stylex-colors")
+          img(src="https://unpkg.com/simple-icons@latest/icons/github.svg", height=24, alt="Github logo")
+    main.Page-main
+      div.container
+        div.Colors
+          each shades, name in colors
+            div.Colors-color
+              h2.Colors-title(id=name)
+                a(href=`#${name}`) #
+                = " " + name
+              div.Palette
+                each color, index in shades
+                  div.Palette-item
+                    div.Palette-color(style={'background-color': `hsl(${color[0]}, ${color[1]}%, ${color[2]}%)`})
+                    div.Palette-label= index
+    footer.Page-footer
+      div.container
+        div © #[a(href="https://rumk.in") Paul Rumkin], 2019
+

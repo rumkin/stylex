@@ -4,7 +4,8 @@
   "private": true,
   "devDependencies": {
     "color-convert": "^2.0.1",
-    "outdent": "^0.7.0"
+    "outdent": "^0.7.0",
+    "pug": "^2.0.4"
   },
   "dependencies": {},
   "scripts": {
