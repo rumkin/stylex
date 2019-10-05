@@ -11,7 +11,7 @@ to its human and computation friendliness.
 Browser:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@stylex/colors/v1.0/colors.css" />
+<link rel="stylesheet" href="https://unpkg.com/@stylex/colors@v1.0/colors.css" />
 <style>
   html {
     background-color: var(--violet-90);
@@ -37,12 +37,12 @@ npm i @stylex/colors
 
 Browser ESM:
 ```html
-<script type="module" src="https://unpkg.com/@styles/colors/v1.0/colors.js"></script>
+<script type="module" src="https://unpkg.com/@styles/colors@v1.0/colors.js"></script>
 ```
 
 Browser UMD:
 ```html
-<script src="https://unpkg.com/@styles/colors/v1.0/colors.umd.js"></script>
+<script src="https://unpkg.com/@styles/colors@v1.0/colors.umd.js"></script>
 ```
 
 ## Colors
