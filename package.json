@@ -9,13 +9,19 @@
   },
   "dependencies": {},
   "scripts": {
-    "clear": "rm -rf build",
-    "dir": "mkdir build",
     "build": "npm run clear && npm run dir && npm run build:all",
     "build:all": "npm run build:hex && npm run build:hsl && npm run build:rgb",
-    "build:hex": "rm -rf build/hex && mkdir -p build/hex && npm run dist:hex",
-    "build:hsl": "rm -rf build/hsl && mkdir -p build/hsl && npm run dist:hsl && cp readme.md build/hsl/readme.md && cp var/package.json build/hsl/package.json",
-    "build:rgb": "rm -rf build/rgb && mkdir -p build/rgb && npm run dist:rgb && cp readme.md build/rgb/readme.md",
+    "build:hex": "npm run clear:hex && npm run dir:hex && npm run dist:hex",
+    "build:hsl": "npm run clear:hsl && npm run dir:hsl && npm run dist:hsl && cp readme.md build/hsl/readme.md && cp var/package.json build/hsl/package.json",
+    "build:rgb": "npm run clear:rgb && npm run dir:rgb && npm run dist:rgb && cp readme.md build/rgb/readme.md",
+    "clear": "rm -rf build",
+    "clear:hex": "rm -rf build/hex",
+    "clear:hsl": "rm -rf build/hsl",
+    "clear:rgb": "rm -rf build/rgb",
+    "dir": "mkdir build",
+    "dir:hex": "mkdir -p build/hex",
+    "dir:hsl": "mkdir -p build/hsl",
+    "dir:rgb": "mkdir -p build/rgb",
     "dist:hex": "npm run dist:css:hex && npm run dist:esm:hex && npm run dist:json:hex && npm run dist:umd:hex",
     "dist:hsl": "npm run dist:css:hsl && npm run dist:esm:hsl && npm run dist:json:hsl && npm run dist:umd:hsl",
     "dist:rgb": "npm run dist:css:rgb && npm run dist:cjs:rgb && npm run dist:esm:rgb && npm run dist:json:rgb && npm run dist:umd:rgb",
@@ -30,6 +36,7 @@
     "dist:json:hsl": "node bin/json-hsl.js > build/hsl/colors.json",
     "dist:umd:hex": "node bin/umd-hex.js > build/hex/colors.umd.js",
     "dist:umd:hsl": "node bin/umd-hsl.js > build/hsl/colors.umd.js",
-    "dist:umd:rgb": "node bin/umd-rgb.js > build/rgb/colors.umd.js"
+    "dist:umd:rgb": "node bin/umd-rgb.js > build/rgb/colors.umd.js",
+    "docs": "npm run dir:hsl && npm run dist:json:hsl && node bin/demo.js > docs/index.html"
   }
 }
