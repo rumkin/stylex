@@ -36,22 +36,22 @@ const colors = {
     hue: 310,
     saturation: 65,
   },
-  purple: {
+  pink: {
     hue: 340,
     saturation: 90,
   },
   // Gray colors
   silver: {
     hue: 200,
-    saturation: 5,
+    saturation: 10,
   },
   gray: {
     hue: 0,
     saturation: 0,
   },
   rusty: {
-    hue: 50,
-    saturation: 5,
+    hue: 40,
+    saturation: 10,
   },
 }
 
