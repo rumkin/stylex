@@ -14,9 +14,9 @@ names.forEach(function(name, i) {
   })
   .forEach(function(lightness, ii) {
     const isLastLightness = ii === params.lightness.length - 1
-    const prefix = '    "' + (100 - lightness) + '": '
+    const prefix = '    "' + lightness + '": '
     const postfix = (isLastLightness ? '' : ',')
-    const hex = convert.hsl.hex(params.hue, params.saturation, lightness)
+    const hex = convert.hsl.hex(params.hue, params.saturation, (100 - lightness))
 
     result.push(prefix + '"#' + hex +  '"' + postfix)
   })

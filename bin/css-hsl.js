@@ -8,13 +8,11 @@ names.forEach(function(name, i) {
   result.push('  /* ' + name + ' */')
   const params = colors[name]
 
-  params.lightness.sort(function (a, b) {
-    return b - a
-  })
+  params.lightness
   .forEach(function(lightness) {
-    const prefix = '  --' + name + '-' + (100 - lightness) + ': '
+    const prefix = '  --' + name + '-' + lightness + ': '
 
-    result.push(prefix + 'hsl(' + params.hue + ', ' + params.saturation + '%, ' + lightness + '%);')
+    result.push(prefix + 'hsl(' + params.hue + ', ' + params.saturation + '%, ' + (100 - lightness) + '%);')
   })
 })
 

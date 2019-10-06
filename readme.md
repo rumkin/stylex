@@ -11,7 +11,7 @@ to its human and computation friendliness.
 Browser:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@stylex/colors@v1.0/colors.css" />
+<link rel="stylesheet" href="https://unpkg.com/@stylex/colors@v1.1/colors.css" />
 <style>
   html {
     background-color: var(--violet-90);
@@ -37,17 +37,17 @@ npm i @stylex/colors
 
 Browser ESM:
 ```html
-<script type="module" src="https://unpkg.com/@styles/colors@v1.0/colors.js"></script>
+<script type="module" src="https://unpkg.com/@styles/colors@v1.1/colors.js"></script>
 ```
 
 Browser UMD:
 ```html
-<script src="https://unpkg.com/@styles/colors@v1.0/colors.umd.js"></script>
+<script src="https://unpkg.com/@styles/colors@v1.1/colors.umd.js"></script>
 ```
 
 ## Colors
 
-Each color has 10 shades. Each shade presented as index of lightness.
+Each color has shades from 5 to 95. Each shade presented as index of lightness.
 CSS names format is `--${COLOR}-${SHADE}`.
 
 Colors:
@@ -63,18 +63,6 @@ Colors:
 * silver
 * gray
 * rusty
-
-Shades:
-* 5
-* 10
-* 20
-* 30
-* 40
-* 50
-* 60
-* 70
-* 80
-* 90
 
 ## License
 

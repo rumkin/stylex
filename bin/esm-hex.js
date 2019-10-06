@@ -15,8 +15,8 @@ names.forEach(function(name, i) {
     return b - a
   })
   .forEach(function(lightness) {
-    const prefix = '  ' + (100 - lightness) + ': '
-    const hex = convert.hsl.hex(params.hue, params.saturation, lightness)
+    const prefix = '  ' + lightness + ': '
+    const hex = convert.hsl.hex(params.hue, params.saturation, (100 - lightness))
 
     result.push(prefix + '\'#' + hex +  '\',')
   })

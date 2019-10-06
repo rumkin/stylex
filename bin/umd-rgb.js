@@ -36,8 +36,8 @@ names.forEach(function(name, i) {
     return b - a
   })
   .forEach(function(lightness) {
-    const prefix = '    ' + (100 - lightness) + ': '
-    const rgb = convert.rgb.hsl(params.hue, params.saturation, lightness)
+    const prefix = '    ' + lightness + ': '
+    const rgb = convert.rgb.hsl(params.hue, params.saturation, (100 - lightness))
 
     result.push(prefix + '[' + rgb[0] + ', ' + rgb[1] + ', ' + rgb[2] + '],')
   })

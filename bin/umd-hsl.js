@@ -31,13 +31,11 @@ names.forEach(function(name, i) {
 
   const params = colors[name]
 
-  params.lightness.sort(function (a, b) {
-    return b - a
-  })
+  params.lightness
   .forEach(function(lightness) {
-    const prefix = '    ' + (100 - lightness) + ': '
+    const prefix = '    ' + lightness + ': '
 
-    result.push(prefix + '[' + params.hue + ', ' + params.saturation + ', ' + lightness + '],')
+    result.push(prefix + '[' + params.hue + ', ' + params.saturation + ', ' + (100 - lightness) + '],')
   })
   result.push('  }')
 })

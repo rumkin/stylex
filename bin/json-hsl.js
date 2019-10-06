@@ -8,15 +8,13 @@ names.forEach(function(name, i) {
   const isLastColor = i === names.length - 1
   result.push('  "' + name + '": {')
 
-  params.lightness.sort(function (a, b) {
-    return b - a
-  })
+  params.lightness
   .forEach(function(lightness, ii) {
     const isLastLightness = ii === params.lightness.length - 1
-    const prefix = '    "' + (100 - lightness) + '": '
+    const prefix = '    "' + lightness + '": '
     const postfix = (isLastLightness ? '' : ',')
 
-    result.push(prefix + '[' + params.hue + ', ' + params.saturation + ', ' + lightness + ']' + postfix)
+    result.push(prefix + '[' + params.hue + ', ' + params.saturation + ', ' + (100 - lightness) + ']' + postfix)
   })
   result.push('  }' + (isLastColor ? '' : ','))
 })

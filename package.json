@@ -24,7 +24,7 @@
     "dir:rgb": "mkdir -p build/rgb",
     "dist:hex": "npm run dist:css:hex && npm run dist:esm:hex && npm run dist:json:hex && npm run dist:umd:hex",
     "dist:hsl": "npm run dist:css:hsl && npm run dist:esm:hsl && npm run dist:json:hsl && npm run dist:umd:hsl",
-    "dist:rgb": "npm run dist:css:rgb && npm run dist:cjs:rgb && npm run dist:esm:rgb && npm run dist:json:rgb && npm run dist:umd:rgb",
+    "dist:rgb": "npm run dist:css:rgb && npm run dist:esm:rgb && npm run dist:json:rgb && npm run dist:umd:rgb",
     "dist:css:hex": "node bin/css-hex.js > build/hex/colors.css",
     "dist:css:rgb": "node bin/css-rgb.js > build/rgb/colors.css",
     "dist:css:hsl": "node bin/css-hsl.js > build/hsl/colors.css",
