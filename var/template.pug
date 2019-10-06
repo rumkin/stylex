@@ -1,9 +1,13 @@
+include ./mixins/palette.pug
+
 doctype html
 html(lang="en")
   head
     title Stylex.Colors
+    meta(charset="utf-8")
     meta(name="viewport", value="width=device-width, initial-scale=1, shrink-to-fit=no")
     style
+      include ../build/hsl/colors.css
       include style.css
   body
     header.Page-header
@@ -17,16 +21,15 @@ html(lang="en")
     main.Page-main
       div.container
         div.Colors
-          each shades, name in colors
+          each shades, color in colors.hsl
             div.Colors-color
-              h2.Colors-title(id=name)
-                a(href=`#${name}`) #
-                = " " + name
+              h2.Colors-title(id=color)
+                a(href=`#${color}`) #
+                = " " + color
               div.Palette
-                each color, index in shades
+                each hsl, index in shades
                   div.Palette-item
-                    div.Palette-color(style={'background-color': `hsl(${color[0]}, ${color[1]}%, ${color[2]}%)`})
-                    div.Palette-label= index
+                    +palette(color, index, hsl, colors.hex[color][index], colors.rgb[color][index])
     footer.Page-footer
       div.container
         div © #[a(href="https://rumk.in") Paul Rumkin], 2019

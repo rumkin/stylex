@@ -1,7 +1,11 @@
 const pug = require('pug')
 const path = require('path')
 
-const colors = require(path.resolve(__dirname, '../build/hsl/colors.json'))
+const colors = {
+  hsl: require(path.resolve(__dirname, '../build/hsl/colors.json')),
+  hex: require(path.resolve(__dirname, '../build/hex/colors.json')),
+  rgb: require(path.resolve(__dirname, '../build/rgb/colors.json')),
+}
 
 console.log(
   pug.renderFile(

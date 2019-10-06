@@ -1,0 +1,11 @@
+- const colorRgb = (rgb) => `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`
+- const colorHsl = (hsl) => `hsl(${hsl[0]}, ${hsl[1]}%, ${hsl[2]}%)`
+
+mixin palette(color, index, hsl, hex, rgb)
+  div.PaletteItem
+    div.PaletteItem-color(style={'background-color': colorHsl(hsl)})
+    div.PaletteItem-label
+      div.PaletteItem-index= index
+      div= colorHsl(hsl)
+      div= colorRgb(colors.rgb[color][index])
+      div= colors.hex[color][index]
