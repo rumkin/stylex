@@ -5,11 +5,11 @@ const colors = {
     saturation: 80,
   },
   orange: {
-    hue: 40,
+    hue: 30,
     saturation: 100,
   },
   yellow: {
-    hue: 50,
+    hue: 45,
     saturation: 95,
   },
   green: {
@@ -21,11 +21,11 @@ const colors = {
     saturation: 60,
   },
   blue: {
-    hue: 205,
+    hue: 215,
     saturation: 85,
   },
   indigo: {
-    hue: 230,
+    hue: 235,
     saturation: 60,
   },
   violet: {
@@ -43,7 +43,7 @@ const colors = {
   // Gray colors
   silver: {
     hue: 200,
-    saturation: 10,
+    saturation: 15,
   },
   gray: {
     hue: 0,
@@ -51,7 +51,7 @@ const colors = {
   },
   rusty: {
     hue: 40,
-    saturation: 10,
+    saturation: 15,
   },
 }
 
