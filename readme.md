@@ -3,12 +3,19 @@
 Versionable colors for your web app as dependency.
 
 This package contains colors for stylex design system. It presented
-as CSS, CommonJS, ESM, JSON and UMD. HSL model is used for color values due
+as CSS, ESM, JSON and UMD. HSL model is used for color values due
 to its human and computation friendliness.
+
+
+## Install
+
+```bash
+npm i @stylex/colors
+```
 
 ## Usage
 
-Browser:
+CSS:
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/@stylex/colors@v1.3/colors.css" />
@@ -20,7 +27,9 @@ Browser:
 </style>
 ```
 
-JS:
+### JS
+
+Node.JS:
 ```js
 import {red, silver} from '@stylex/colors'
 
@@ -28,16 +37,11 @@ red[50] // -> [0, 80, 50]
 silver[90] // -> [200, 5, 90]
 ```
 
-## Import
-
-NPM:
-```bash
-npm i @stylex/colors
-```
-
 Browser ESM:
 ```html
-<script type="module" src="https://unpkg.com/@styles/colors@v1.3/colors.js"></script>
+<script type="module">
+import {red, green, blue} from 'https://unpkg.com/@styles/colors@v1.3/colors.js'
+</script>
 ```
 
 Browser UMD:
