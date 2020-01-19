@@ -10,7 +10,7 @@ const colors = {
   },
   yellow: {
     hue: 45,
-    saturation: 95,
+    saturation: 100,
   },
   green: {
     hue: 140,
